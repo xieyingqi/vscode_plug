@@ -1,18 +1,22 @@
 import * as vscode from 'vscode';
 
 export class Myclass {
-	private bar:vscode.StatusBarItem;
+	private boxopt:vscode.InputBoxOptions;
 	constructor() {
-		this.bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+		this.boxopt = {
+			placeHolder:"请输入",
+			validateInput:function(text){return text;},
+		};
 	}
 
-	public static myfunc()
-	{
+	public myfunc() {
 		vscode.window.showInformationMessage("mymsg");
 	}
 
-	public static myfunc2()
-	{
-		
+	public myfunc2() {
+		vscode.window.showInputBox(this.boxopt).then(function(msg)
+		{
+			console.log("用户输入："+msg);
+		});
 	}
 }
