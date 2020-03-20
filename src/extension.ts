@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
-import { Myclass } from './test/myfunc';
+import { Translate } from './test/translate';
 
 export function activate(context: vscode.ExtensionContext) {
-	const myclass = new Myclass();
-	context.subscriptions.push(vscode.commands.registerCommand("mycommand",()=>myclass.myfunc()));
-	context.subscriptions.push(vscode.commands.registerCommand("mybarcom",()=>myclass.myfunc2()));
+	const translate = new Translate();
+	context.subscriptions.push(vscode.commands.registerCommand("translate",()=>translate.showInputBox()));
 }
 export function deactivate() {}

@@ -1,22 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
-class Myclass {
+class Translate {
     constructor() {
         this.boxopt = {
-            placeHolder: "请输入",
+            placeHolder: "请输入要翻译的内容",
         },
             this.bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right);
-        this.bar.text = "点";
-        this.bar.tooltip = "a";
+        this.bar.text = "Translate";
+        this.bar.tooltip = "翻译";
         this.bar.command = "translate";
         this.bar.show();
     }
     showInputBox() {
         vscode.window.showInputBox(this.boxopt).then(function (msg) {
-            console.log("用户输入：" + msg);
         });
     }
 }
-exports.Myclass = Myclass;
-//# sourceMappingURL=myfunc.js.map
+exports.Translate = Translate;
+//# sourceMappingURL=translate.js.map

@@ -10,19 +10,15 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:mycommand",
-		"onCommand:mybarcom"
+		"*",
+		"onCommand:translate"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "mycommand",
-				"title": "mytit"
-			},
-			{
-				"command": "mybarcom",
-				"title": "mybar"
+				"command": "translate",
+				"title": "fy"
 			}
 		]
 	},

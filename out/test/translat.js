@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
-class Myclass {
+class Translate {
     constructor() {
         this.boxopt = {
             placeHolder: "请输入",
@@ -18,5 +18,5 @@ class Myclass {
         });
     }
 }
-exports.Myclass = Myclass;
-//# sourceMappingURL=myfunc.js.map
+exports.Translate = Translate;
+//# sourceMappingURL=translat.js.map

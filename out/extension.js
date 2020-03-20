@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
-const myfunc_1 = require("./test/myfunc");
+const translate_1 = require("./test/translate");
 function activate(context) {
-    const myclass = new myfunc_1.Myclass();
-    context.subscriptions.push(vscode.commands.registerCommand("mycommand", () => myclass.myfunc()));
-    context.subscriptions.push(vscode.commands.registerCommand("mybarcom", () => myclass.myfunc2()));
+    const translate = new translate_1.Translate();
+    context.subscriptions.push(vscode.commands.registerCommand("translate", () => translate.showInputBox()));
 }
 exports.activate = activate;
 function deactivate() { }
